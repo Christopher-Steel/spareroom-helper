@@ -1,18 +1,17 @@
 {
   "manifest_version": 2,
 
-  "name": "SpareRoom commute finder",
-  "description": "This extension adds commute time to your set workplace to spareroom ads when possible",
+  "name": "SpareRoom helper",
+  "description": "This extension adds pcm prices next to pw ones and add a gmaps link",
   "version": "0.2",
 
   "content_scripts": [
     {
-      "matches": ["http://www.spareroom.co.uk/flatshare/flatshare_detail.pl*"],
-      "css": ["commute_finder.css"],
-      "js": ["jquery.js", "commute_finder.js"]
+      "matches": ["https://www.spareroom.co.uk/flatshare/*"],
+      "css": ["spareroom-helper.css"],
+      "js": ["jquery.js", "options.js", "spareroom-helper.js"]
     }
   ],
-  "permissions": [
-    "https://ajax.googleapis.com/"
-  ]
+
+  "options_page": "options.html"
 }
